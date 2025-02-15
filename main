@@ -22,5 +22,14 @@ def random_fact():
                   'Социальные сети имеют как позитивные, так и негативные стороны, и мы должны быть более осознанными в использовании этих платформ.'
                   ]
     return f'<p>{random.choice(facts_list)}</p>'
+@app.route("/passwordgenerator")
+def rand_pass():
+    password=1234567890qwertyuiopasdfghjklzxcvbnm
+    password_real= "
+    for i in range(int(random.choice(1,20))):
+        password_real += random.choice(password)
+        return f"""
+        <h1>(password_real)</h1>
+        """
 
 app.run(debug=True)
